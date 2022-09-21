@@ -6,20 +6,13 @@
 /*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 10:33:36 by darismen          #+#    #+#             */
-/*   Updated: 2022/09/21 11:36:23 by darismen         ###   ########.fr       */
+/*   Updated: 2022/09/21 13:14:36 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
-}
-
-int main(void)
-{
-	ft_isdigit('5');
 }

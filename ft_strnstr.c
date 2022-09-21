@@ -6,13 +6,13 @@
 /*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 10:19:18 by darismen          #+#    #+#             */
-/*   Updated: 2022/09/21 10:54:04 by darismen         ###   ########.fr       */
+/*   Updated: 2022/09/21 13:23:50 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /* #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *str, const char *sub, size_t len);
 {
 	size_t	h;
 	size_t	n;
@@ -36,3 +36,4 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (0);
 }
  */
+

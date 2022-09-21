@@ -6,11 +6,11 @@
 /*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 10:05:13 by darismen          #+#    #+#             */
-/*   Updated: 2022/09/21 12:44:52 by darismen         ###   ########.fr       */
+/*   Updated: 2022/09/21 13:21:41 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memmove(void *dest, const void *src, unsigned int len)
+void	*ft_memmove(void *dest, const void *src, unsigned int len)
 {
 	unsigned int	n;
 	void			*og_dest;
