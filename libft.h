@@ -6,7 +6,7 @@
 /*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 11:41:05 by darismen          #+#    #+#             */
-/*   Updated: 2022/09/21 13:23:25 by darismen         ###   ########.fr       */
+/*   Updated: 2022/09/21 13:48:56 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include <stdio.h>
 # include <unistd.h>
 
-int				ft_isalpha(int c);
+int			ft_isalpha(int c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);
 int				ft_isascii(int c);
