@@ -6,15 +6,17 @@
 #    By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/19 11:41:39 by darismen          #+#    #+#              #
-#    Updated: 2022/09/21 13:38:26 by darismen         ###   ########.fr        #
+#    Updated: 2022/09/21 14:40:38 by darismen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME=		libft.a
 
-SRCS=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c \
-		ft_memset.c ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c \
-		ft_strchr.c ft_strrchr.c ft_strncmp.c ft_atoi.c
+SRCS=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
+		ft_strlen.c	ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
+		ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c \
+		ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr ft_atoi.c
+
 OBJS=	${SRCS:.c=.o}
 
 INCLUDES	= -I includes
@@ -31,20 +33,20 @@ ${NAME}:	${OBJS}
 		${AR} ${NAME} ${OBJS}
 #		ranlib ${NAME}
 
-.c.o:		
-		@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+# .c.o:		
+# 		@$(CC) $(CFLAGS) -c $< -o $@
 
-#%.o: %.c
-#	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+%.o: %.c
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 bonus:	${NAME} ${OBJ_BONUS}
 	@ar rcs ${NAME} ${OBJ_BONUS}
 
-#clean:
-#		${RM} ${OBJS}
-#fclean:		clean
-#		${RM} ${NAME}
-#re:		fclean ${NAME}
+clean:
+	@${RM} ${OBJS}
+# fclean:		clean
+# 	@${RM} ${NAME}
+# re:		fclean ${NAME}
 
 #.PHONY:	all clean fclean re
 

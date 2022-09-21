@@ -6,9 +6,21 @@
 /*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 10:50:54 by darismen          #+#    #+#             */
-/*   Updated: 2022/09/21 12:25:36 by darismen         ###   ########.fr       */
+/*   Updated: 2022/09/21 14:15:52 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
+{
+	size_t	l;
+
+	l = 0;
+	while (s[l] != 0)
+		l++;
+	return (l);
+}
 
 char	*ft_strrchr(const char *str, int c)
 {

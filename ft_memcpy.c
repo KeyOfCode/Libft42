@@ -6,7 +6,7 @@
 /*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 09:56:37 by darismen          #+#    #+#             */
-/*   Updated: 2022/09/21 12:17:02 by darismen         ###   ########.fr       */
+/*   Updated: 2022/09/21 14:22:19 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ void	ft_memcpy(void *dest, const void *src, unsigned int size)
 
 	og_dest = dest;
 	if (!dest && !src)
-		return (0);
+		return ;
 	n = 0;
 	while (n < size)
 	{
 		((unsigned char *)dest)[n] = ((unsigned char *)src)[n];
 		n++;
 	}
-	return (dest);
+	return ;
 }
 
 /*

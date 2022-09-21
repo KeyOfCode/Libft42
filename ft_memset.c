@@ -6,13 +6,13 @@
 /*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 13:08:08 by darismen          #+#    #+#             */
-/*   Updated: 2022/09/21 12:26:32 by darismen         ###   ########.fr       */
+/*   Updated: 2022/09/21 14:15:02 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memset(void *b, int c, unsigned int len)
+void	*ft_memset(void *b, int c, unsigned int len)
 {
-	unsigned int	i;
+	unsigned long	i;
 
 	i = 0;
 	c = (unsigned char)c;
@@ -21,4 +21,5 @@ void	*memset(void *b, int c, unsigned int len)
 		((unsigned char *)b)[i] = c;
 		i++;
 	}
+	return (0);
 }

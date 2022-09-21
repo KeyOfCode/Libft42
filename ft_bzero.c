@@ -6,13 +6,13 @@
 /*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 09:51:05 by darismen          #+#    #+#             */
-/*   Updated: 2022/09/21 12:19:21 by darismen         ###   ########.fr       */
+/*   Updated: 2022/09/21 14:21:32 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_bzero(void *s, unsigned int n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	if (n == 0)
