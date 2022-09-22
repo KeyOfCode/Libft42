@@ -6,7 +6,7 @@
 /*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 10:18:51 by darismen          #+#    #+#             */
-/*   Updated: 2022/09/21 10:19:06 by darismen         ###   ########.fr       */
+/*   Updated: 2022/09/22 11:28:20 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@
 **	Both strings are assumed to be n bytes long.
 */
 
-/* int		ft_memcmp(const void *s1, const void *s2, size_t n)
+#include "libft.h"
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;
 
@@ -31,4 +33,4 @@
 		i++;
 	}
 	return (0);
-} */
+}
