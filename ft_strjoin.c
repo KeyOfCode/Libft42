@@ -6,12 +6,22 @@
 /*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 12:19:31 by darismen          #+#    #+#             */
-/*   Updated: 2022/09/25 16:41:52 by darismen         ###   ########.fr       */
+/*   Updated: 2022/09/25 19:51:30 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+
+size_t	ft_strlen(const char *s)
+{
+	size_t	l;
+
+	l = 0;
+	while (s[l] != 0)
+		l++;
+	return (l);
+}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

@@ -6,12 +6,22 @@
 /*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 12:36:25 by darismen          #+#    #+#             */
-/*   Updated: 2022/09/25 16:01:03 by darismen         ###   ########.fr       */
+/*   Updated: 2022/09/25 19:50:53 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+
+size_t	ft_strlen(const char *s)
+{
+	size_t	l;
+
+	l = 0;
+	while (s[l] != 0)
+		l++;
+	return (l);
+}
 
 int	ft_trimfirst(char const *s1, char const *set, int len, int set_len)
 {
