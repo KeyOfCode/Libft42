@@ -6,7 +6,7 @@
 /*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 10:18:36 by darismen          #+#    #+#             */
-/*   Updated: 2022/09/21 10:19:38 by darismen         ###   ########.fr       */
+/*   Updated: 2022/09/25 16:41:58 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,18 @@
 **	unsigned char) in string s.
 */
 
-/* #include "libft.h"
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)
 	{
-		if (((unsigned char*)s)[i] == (unsigned char)c)
-			return ((void*)(s + i));
+		if (((unsigned char *)s)[i] == (unsigned char)c)
+			return ((void *)(s + i));
 		i++;
 	}
 	return (0);
-} */
+}

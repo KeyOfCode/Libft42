@@ -6,20 +6,21 @@
 /*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 13:08:08 by darismen          #+#    #+#             */
-/*   Updated: 2022/09/21 14:15:02 by darismen         ###   ########.fr       */
+/*   Updated: 2022/09/25 16:36:22 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	*ft_memset(void *b, int c, unsigned int len)
 {
 	unsigned long	i;
+	unsigned char	*prt;
 
 	i = 0;
-	c = (unsigned char)c;
+	prt = (unsigned char *)b;
 	while (i < len)
 	{
-		((unsigned char *)b)[i] = c;
+		prt[i] = (unsigned char)c;
 		i++;
 	}
-	return (0);
+	return (b);
 }

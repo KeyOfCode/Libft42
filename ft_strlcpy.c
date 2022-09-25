@@ -6,7 +6,7 @@
 /*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 10:46:22 by darismen          #+#    #+#             */
-/*   Updated: 2022/09/21 10:46:32 by darismen         ###   ########.fr       */
+/*   Updated: 2022/09/25 16:46:00 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	{
 		srclen++;
 	}
-	if (size == 0)
+	if (size == 0 || srclen == 0)
 		return (srclen);
 	while (n < size - 1 && src[n] != '\0')
 	{
