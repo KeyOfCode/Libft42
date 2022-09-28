@@ -6,22 +6,12 @@
 /*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 12:02:49 by darismen          #+#    #+#             */
-/*   Updated: 2022/09/25 19:50:18 by darismen         ###   ########.fr       */
+/*   Updated: 2022/09/27 12:32:33 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	l;
-
-	l = 0;
-	while (s[l] != 0)
-		l++;
-	return (l);
-}
 
 char	*ft_strdup(const char *s1)
 {
@@ -29,8 +19,12 @@ char	*ft_strdup(const char *s1)
 	int		i;
 	int		len;
 
-	len = ft_strlen(s1);
+	len = 0;
+	while (s1[len] != 0)
+		len++;
 	s2 = (char *)malloc(len);
+	if (!(s2))
+		return (NULL);
 	i = 0;
 	while (i < len)
 	{
@@ -39,7 +33,7 @@ char	*ft_strdup(const char *s1)
 	}
 	return (s2);
 }
-
+/* 
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
@@ -73,3 +67,4 @@ int		main(int argc, const char *argv[])
 	}
 	return (0);
 }
+ */

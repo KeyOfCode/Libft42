@@ -6,3 +6,4 @@ a.out
 .vscode
 srcs
 objs
+*.dSYM

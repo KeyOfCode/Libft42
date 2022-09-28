@@ -6,7 +6,7 @@
 /*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 11:34:13 by darismen          #+#    #+#             */
-/*   Updated: 2022/09/25 20:05:52 by darismen         ###   ########.fr       */
+/*   Updated: 2022/09/27 12:31:13 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
-	start = (size_t)start;
 	subs = (char *)malloc(len);
-	if (!(subs) || len == 0)
+	if (!(subs))
 		return (NULL);
 	while (s[start] != '\0' && i < len)
 	{

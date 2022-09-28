@@ -6,14 +6,14 @@
 /*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 12:19:31 by darismen          #+#    #+#             */
-/*   Updated: 2022/09/25 19:51:30 by darismen         ###   ########.fr       */
+/*   Updated: 2022/09/27 12:32:01 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-size_t	ft_strlen(const char *s)
+size_t	ft_priv_strlen(const char *s)
 {
 	size_t	l;
 
@@ -31,10 +31,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	char	*newstr;
 
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
+	len1 = ft_priv_strlen(s1);
+	len2 = ft_priv_strlen(s2);
 	tot_len = len1 + len2;
 	newstr = (char *)malloc(tot_len);
+	if (!(newstr))
+		return (NULL);
 	i = 0;
 	while (i < len1)
 	{
@@ -49,3 +51,70 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	return (newstr);
 }
+/* 
+#include <stdlib.h>
+#include <unistd.h>
+
+void	ft_print_result(char const *s)
+{
+	int		len;
+
+	len = 0;
+	while (s[len])
+		len++;
+	write(1, s, len);
+}
+
+int		main(int argc, const char *argv[])
+{
+	char	s1[] = "lorem ipsum";
+	char	s2[] = "dolor sit amet";
+	char	*strjoin;
+	int		arg;
+
+
+	if (argc == 1)
+		return (0);
+	else if ((arg = atoi(argv[1])) == 1)
+	{
+		if (!(strjoin = ft_strjoin(s1, s2)))
+			ft_print_result("NULL");
+		else
+			ft_print_result(strjoin);
+		if (strjoin == s1 || strjoin == s2)
+			ft_print_result("\nA new string was not returned");
+	}
+	else if (arg == 2)
+	{
+		s1[0] = '\0';
+		if (!(strjoin = ft_strjoin(s1, s2)))
+			ft_print_result("NULL");
+		else
+			ft_print_result(strjoin);
+		if (strjoin == s1 || strjoin == s2)
+			ft_print_result("\nA new string was not returned");
+	}
+	else if (arg == 3)
+	{
+		s2[0] = '\0';
+		if (!(strjoin = ft_strjoin(s1, s2)))
+			ft_print_result("NULL");
+		else
+			ft_print_result(strjoin);
+		if (strjoin == s1 || strjoin == s2)
+			ft_print_result("\nA new string was not returned");
+	}
+	else if (arg == 4)
+	{
+		s1[0] = '\0';
+		s2[0] = '\0';
+		if (!(strjoin = ft_strjoin(s1, s2)))
+			ft_print_result("NULL");
+		else
+			ft_print_result(strjoin);
+		if (strjoin == s1 || strjoin == s2)
+			ft_print_result("\nA new string was not returned");
+	}
+	return (0);
+}
+ */
