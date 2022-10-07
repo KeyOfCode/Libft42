@@ -6,7 +6,7 @@
 /*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 16:21:17 by darismen          #+#    #+#             */
-/*   Updated: 2022/10/07 17:34:08 by darismen         ###   ########.fr       */
+/*   Updated: 2022/10/07 17:52:26 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	if (n < 0)
 	{
-		priv_putchar('-', fd);
+		priv_putchar_fd('-', fd);
 		n = -n;
 	}
 	if (n >= 10)
@@ -30,7 +30,7 @@ void	ft_putnbr_fd(int n, int fd)
 		n = n % 10;
 	}
 	if (n < 10)
-		priv_putchar(n + 48, fd);
+		priv_putchar_fd(n + 48, fd);
 }
 
 /* Descripción 

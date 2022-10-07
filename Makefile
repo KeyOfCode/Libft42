@@ -6,7 +6,7 @@
 #    By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/19 11:41:39 by darismen          #+#    #+#              #
-#    Updated: 2022/09/25 18:49:18 by darismen         ###   ########.fr        #
+#    Updated: 2022/10/07 18:16:42 by darismen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,10 +18,20 @@ SRCS=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 		ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c \
 		ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c
 
+SRCS_BONUS =	ft_lstnew.c			\
+				ft_lstadd_front.c	\
+				ft_lstsize.c		\
+				ft_lstlast.c		\
+				ft_lstadd_back.c	\
+				ft_lstclear.c		\
+				ft_lstdelone.c		\
+				ft_lstiter.c		\
+				ft_lstmap.c			\
+
 SRC=	$(wildcard *.c)
 
 OBJS=	${SRC:.c=.o}
-
+OBJ_BONUS = $(SRCSB:.c=.o)
 # INCLUDES	= -I includes
 
 CC=			gcc
@@ -34,16 +44,14 @@ all:		${NAME}
 
 ${NAME}:	${OBJS}
 	@${AR} ${NAME} ${OBJS}
-#		ranlib ${NAME}
 
-# .c.o:		
-# 		@$(CC) $(CFLAGS) -c $< -o $@
+bonus:	${NAME_BONUS} 
+
+${NAME_BONUS}: ${OBJ_BONUS}
+	@${AR} ${NAME} ${OBJ_BONUS}
 
 %.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
-
-# bonus:	${NAME} ${OBJ_BONUS}
-# 	@ar rcs ${NAME} ${OBJ_BONUS}
 
 clean:
 	@${RM} ${OBJS}

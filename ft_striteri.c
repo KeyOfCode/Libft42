@@ -6,7 +6,7 @@
 /*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 13:12:15 by darismen          #+#    #+#             */
-/*   Updated: 2022/09/28 13:19:37 by darismen         ###   ########.fr       */
+/*   Updated: 2022/10/07 17:54:18 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	i = 0;
 	while (s[i] != 0)
 	{
-		f(i, s[i]);
+		f(i, &s[i]);
 		i++;
 	}
 }
