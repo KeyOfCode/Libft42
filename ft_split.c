@@ -6,7 +6,7 @@
 /*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 12:29:21 by darismen          #+#    #+#             */
-/*   Updated: 2022/09/27 18:20:35 by darismen         ###   ########.fr       */
+/*   Updated: 2022/10/07 17:36:27 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,6 @@ char	**ft_split(char const *s, char c)
 			while (s[i] == c)
 				i++;
 			newarry[count] = store_string(s, i - cut, i);
-			printf("i :  %d; cut: %i\n", i , cut);
 			cut = i;
 			count++;
 		}
@@ -81,7 +80,7 @@ char	**ft_split(char const *s, char c)
 	}
 	return (newarry);
 }
-
+/*
 #include <stdlib.h>
 #include <unistd.h>
 
@@ -108,8 +107,9 @@ int	main(void)
 		write(1, "\n", 1);
 		i++;
 	}
-}
-/* 
+} 
+*/
+/*
 int		main(int argc, const char *argv[])
 {
 	char	**tabstr;
@@ -200,7 +200,7 @@ int		main(int argc, const char *argv[])
 	}
 	return (0);
 }
- */
+*/
 
 /* Allocates (with malloc(3)) and returns an array
 of strings obtained by splitting ’s’ using the

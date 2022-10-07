@@ -6,11 +6,12 @@
 /*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 16:18:44 by darismen          #+#    #+#             */
-/*   Updated: 2022/09/28 16:19:03 by darismen         ###   ########.fr       */
+/*   Updated: 2022/10/07 17:34:16 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
 void	ft_putstr_fd(char const *s, int fd)
 {
@@ -21,3 +22,14 @@ void	ft_putstr_fd(char const *s, int fd)
 		while (s[i])
 			write(fd, &s[i++], 1);
 }
+
+/* Parámetros 
+	s: La string a enviar.
+	fd: El file descriptor sobre el que escribir.
+Valor devuelto 
+	Nada
+Funciones autorizadas
+	write
+Descripción 
+	Envía la string ’s’ al file descriptor
+	especificado. */

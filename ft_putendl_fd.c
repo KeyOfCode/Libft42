@@ -6,9 +6,11 @@
 /*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 16:20:05 by darismen          #+#    #+#             */
-/*   Updated: 2022/09/28 16:20:40 by darismen         ###   ########.fr       */
+/*   Updated: 2022/10/07 17:48:13 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 void	ft_putstr_fd(char const *s, int fd)
 {
@@ -20,3 +22,7 @@ void	ft_putstr_fd(char const *s, int fd)
 			write(fd, &s[i++], 1);
 	write(fd, "\n", 1);
 }
+
+/* Descripción 
+	Envía la string ’s’ al file descriptor dado,
+	seguido de un salto de línea. */

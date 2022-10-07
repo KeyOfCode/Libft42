@@ -6,9 +6,11 @@
 /*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 12:09:48 by darismen          #+#    #+#             */
-/*   Updated: 2022/09/28 13:01:29 by darismen         ###   ########.fr       */
+/*   Updated: 2022/10/07 16:53:24 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
 
 int	len_int(int value)
 {
@@ -31,6 +33,7 @@ char	*priv_store(char *nb, int n, int i, int len)
 		n /= 10;
 		len--;
 	}
+	return (nb);
 }
 
 char	*ft_itoa(int n)
@@ -60,3 +63,8 @@ char	*ft_itoa(int n)
 	nb = priv_store(nb, n, i, len);
 	return (nb);
 }
+
+/* Descripción 
+	Utilizando malloc(3), genera una string que
+	represente el valor entero recibido como argumento.
+	Los números negativos tienen que gestionarse. */
