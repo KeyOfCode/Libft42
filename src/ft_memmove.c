@@ -3,50 +3,43 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: darismen <darismen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 10:05:13 by darismen          #+#    #+#             */
-/*   Updated: 2022/09/21 13:21:41 by darismen         ###   ########.fr       */
+/*   Updated: 2026/11/02 14:34:22 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/***
+* LIBRARY: <string.h>
+* SYNOPSIS: copy byte string
+*
+* DESCRIPTION:
+* 		The memmove() function copies n bytes from string s2 to string s1.  The
+*	two strings may overlap; the copy is always done in a non-destructive
+*	manner.
+* RETURN VALUES:
+	 	The memmove() function returns the original value of dst.
+*/
 void	*ft_memmove(void *dest, const void *src, unsigned int len)
 {
-	unsigned int	n;
-	void			*og_dest;
+	unsigned char		*d;
+	const unsigned char	*s;
 
-	og_dest = dest;
-	if (!dest && !src)
-		return (0);
-	n = 0;
-	if ((unsigned int)dest - (unsigned int)src < len)
-	{
-		n = len - 1;
-		while (n < len)
-		{
-			((unsigned char *)dest)[n] = ((unsigned char *)src)[n];
-			n--;
-		}
-	}
+	if (!dest || !src || dest == src || !len)
+		return (dest);
+	d = dest;
+	s = src;
+	if (d < s || d >= s + len)
+		while (len--)
+			*d++ = *s++;
 	else
 	{
-		while (n < len)
+		while (len)
 		{
-			((unsigned char *)dest)[n] = ((unsigned char *)src)[n];
-			n++;
+			--len;
+			d[len] = s[len];
 		}
 	}
-	return (og_dest);
+	return (dest);
 }
-
-/*
-** LIBRARY: <string.h>
-** SYNOPSIS: copy byte string
-**
-** DESCRIPTION:
-** 		The memmove() function copies n bytes from string s2 to string s1.  The
-**	two strings may overlap; the copy is always done in a non-destructive
-**	manner.
-	RETURN VALUES
-     	The memmove() function returns the original value of dst.
-*/
