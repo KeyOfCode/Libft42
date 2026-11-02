@@ -22,7 +22,7 @@
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone git@github.com:KeyOfCode/Libft42.git libft
 cd libft
 ```
 
