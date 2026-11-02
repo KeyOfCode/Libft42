@@ -6,7 +6,7 @@
 #    By: darismen <darismen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/19 11:41:39 by darismen          #+#    #+#              #
-#    Updated: 2026/11/02 14:44:07 by darismen         ###   ########.fr        #
+#    Updated: 2026/11/02 15:27:09 by darismen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,13 +32,10 @@ FILES=	ft_isalnum.c ft_isalpha.c ft_isdigit.c ft_isascii.c ft_isprint.c \
 				ft_lstmap.c			\
 		ft_printf.c ft_putchar.c ft_putstr.c ft_putnbr.c ft_printf_util.c \
 		ft_putnbr_base_fd.c \
-		# get_next_line_encheng.c \
-		# get_next_line.c gnl.c \
+		get_next_line.c \
 
-
-SRCS= $(addprefix src/, ${FILES})
-#OBJS=	${SRCS:.c=.o}
-OBJS=	$(addprefix objs/, ${FILES:.c=.o})
+OBJS := $(addprefix objs/, ${FILES:.c=.o})
+SRCS := $(addprefix src/, ${FILES})
 INC= includes/
 
 CC=			gcc

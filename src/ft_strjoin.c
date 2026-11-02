@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: darismen <darismen@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: darismen <darismen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 12:19:31 by darismen          #+#    #+#             */
-/*   Updated: 2024/03/29 17:59:12 by darismen         ###   ########.fr       */
+/*   Updated: 2026/11/02 15:44:26 by darismen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,14 +55,17 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	len1 = ft_priv_strlen(s1);
 	tot_len = len1 + ft_priv_strlen(s2);
 	newstr = (char *)ft_calloc(tot_len + 1, sizeof(char));
-	i = -1;
+	i = 0;
 	j = 0;
 	if (newstr && s1)
 	{
-		while (s1[++i])
+		while (s1[i])
+		{
 			newstr[i] = s1[i];
+			i++;
+		}
 	}
-	while (newstr && s2[j])
+	while (newstr && s2 && s2[j])
 		newstr[i++] = s2[j++];
 	return (newstr);
 }
